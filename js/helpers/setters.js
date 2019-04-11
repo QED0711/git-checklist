@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { exec } from 'shelljs';
 
 import { getCurrentProjectPath } from "./getters";
 
@@ -14,6 +15,7 @@ const setCheckedInactive = () => {
             cb.disabled = true;
             const value = e.target.value;
             updateGitChecklistFile(value)
+            commitTask(value);
         }
     }
 }
@@ -35,10 +37,19 @@ const updateGitChecklistFile = (value) => {
         updated += line + "\n";
     }
     
-    // write the updated string to the new file
+    // write the updated string (but trim it first) to the new file
     fs.writeFile(path, updated.trim(), (err) => {
         if(err) console.error(err)
     })
+}
+
+
+
+const commitTask = async (task) => {
+    const path = getCurrentProjectPath();
+    await exec(`git --git-dir=${path}/.git add .`, {async: true});
+    await exec(`git --git-dir=${path}/.git commit -m "${task}"`, {async: true});
+    // await exec(`git --git-dir=${path}/.git push -u origin master`, {async: true});
 }
 
 export {
