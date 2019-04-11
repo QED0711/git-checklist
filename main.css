@@ -36,3 +36,8 @@ body{
 #project-list option{
     background-color: whitesmoke;
 }
+
+
+#project-banner{
+    text-align: center;
+}

@@ -3,6 +3,6 @@
     [] style main app title
     [X] style file drop div
     [X] style project selection
-    [] style project banner;
+    [X] style project banner
     [] style auto push form
     [] style checklist
