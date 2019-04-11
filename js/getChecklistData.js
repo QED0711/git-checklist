@@ -8,10 +8,11 @@ const createCheckbox = (data) => {
     const checked = data.includes("[X]");
             
     let commit = data.split(/\[.?\]/);
-    commit = commit[commit.length - 1];
+    const indentCount = commit[0].length
+    console.log({indentCount})
     return `
-        <input type="checkbox" class="task-checkbox" value="${commit}" ${checked ? "checked" : null}>
-        <label>${commit}</label>
+        <input type="checkbox" class="task-checkbox" value="${commit}" ${checked ? "checked" : null} style="margin-left: ${indentCount}em">
+        <label>${commit[1]}</label>
         <br>
     `
 }
