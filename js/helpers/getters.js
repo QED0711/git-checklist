@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 
 const getCurrentProjectPath = () => {
     return document.getElementById("project-list").value;
@@ -17,10 +19,15 @@ const getBranch = () => {
     return document.getElementById("branch").value
 }
 
+const hasGitChecklistFile = (path) => {
+    return fs.existsSync(path + '/.gitchecklist')
+}
+
 export {
     getCurrentProjectPath,
     getCurrentProjectName,
     getAutoPush,
-    getBranch
+    getBranch,
+    hasGitChecklistFile,
 }
 
