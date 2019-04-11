@@ -9,8 +9,18 @@ const getCurrentProjectName = () => {
     return projectPath[projectPath.length - 1];
 }
 
+const getAutoPush = () => {
+    return document.getElementById("push").checked;
+}
+
+const getBranch = () => {
+    return document.getElementById("branch").value
+}
+
 export {
     getCurrentProjectPath,
     getCurrentProjectName,
+    getAutoPush,
+    getBranch
 }
 
