@@ -38,9 +38,7 @@ const updateGitChecklistFile = (value) => {
     }
     
     // write the updated string (but trim it first) to the new file
-    fs.writeFile(path, updated.trim(), (err) => {
-        if(err) console.error(err)
-    })
+    fs.writeFileSync(path, updated.trim())
 }
 
 
