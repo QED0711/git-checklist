@@ -7,4 +7,4 @@
 [X] made updating the gitchecklist file synchronous
 [X] tasks do not auto push when auto push is not checked
 [X] handle dirs without .gitchecklist files
-[] checklist of initial project loads on startup
+[X] checklist of initial project loads on startup

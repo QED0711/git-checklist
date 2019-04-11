@@ -1,6 +1,8 @@
 
 import fs from 'fs';
 import setProjectBanner from './setProjectBanner';
+import getChecklistData from "./getChecklistData"
+import { getCurrentProjectPath } from './helpers/getters';
 
 const optionItem = (projectPath) => {
     let projectName = projectPath.split("/");
@@ -26,6 +28,8 @@ const populateProjectList = () => {
             }
             projectList.innerHTML = options;
             setProjectBanner();
+            getChecklistData(getCurrentProjectPath());
+            
         }
     })
 }
