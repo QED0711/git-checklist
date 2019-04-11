@@ -15,6 +15,7 @@ const handleFileDrop = () => {
         for(let file of e.dataTransfer.files){
             console.log(file.path)
             persistProjectPath(file.path)
+            
         }
     }
 

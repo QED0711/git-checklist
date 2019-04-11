@@ -1,5 +1,6 @@
 
 import fs from "fs";
+import populateProjectList from "./populateProjectList";
 
 const persistProjectPath = (path) => {
     // get the contents of the config json file
@@ -13,6 +14,7 @@ const persistProjectPath = (path) => {
                 paths.push(path);
                 fs.writeFile('./config/projectPaths.json', JSON.stringify(paths), (err) => {
                     if(err) console.error(err);
+                    populateProjectList();
                 })
             }
         }

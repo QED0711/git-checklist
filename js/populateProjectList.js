@@ -1,5 +1,6 @@
 
 import fs from 'fs';
+import setProjectBanner from './setProjectBanner';
 
 const optionItem = (projectPath) => {
     let projectName = projectPath.split("/");
@@ -10,7 +11,9 @@ const optionItem = (projectPath) => {
 }
 
 const populateProjectList = () => {
+    // get the project list select element and reset it to have no options
     const projectList = document.getElementById("project-list")
+    projectList.innerHTML = ""
     let options = "";
     
     fs.readFile('./config/projectPaths.json', "utf-8", (err, data) => {
@@ -22,6 +25,7 @@ const populateProjectList = () => {
                 options += optionItem(path);
             }
             projectList.innerHTML = options;
+            setProjectBanner();
         }
     })
 }
