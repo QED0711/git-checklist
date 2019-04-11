@@ -1,11 +1,6 @@
-[] initial folder structure setup
-    [] test task
-    [] this is a test commit from the checklist
-
-
-[X] auto pushing to designated branch
-[X] made updating the gitchecklist file synchronous
-[X] tasks do not auto push when auto push is not checked
-[X] handle dirs without .gitchecklist files
-[X] checklist of initial project loads on startup
-[X] log file path debugging
+[X] add style checklist
+[] CSS
+    [] style file drop div
+    [] style project selection
+    [] style auto push form
+    [] style checklist
