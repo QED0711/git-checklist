@@ -45,6 +45,7 @@ const updateGitChecklistFile = (value) => {
 
 const commitTask = async (task) => {
     const path = getCurrentProjectPath();
+    console.log(path)
     await exec(`git --git-dir=${path}/.git add .`, {async: true});
     await exec(`git --git-dir=${path}/.git commit -m "${task}"`, {async: true});
     if(getAutoPush()){

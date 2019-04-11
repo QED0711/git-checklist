@@ -8,3 +8,4 @@
 [X] tasks do not auto push when auto push is not checked
 [X] handle dirs without .gitchecklist files
 [X] checklist of initial project loads on startup
+[X] log file path debugging
