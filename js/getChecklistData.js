@@ -7,7 +7,7 @@ import { setChecklist, setCheckedInactive } from './helpers/setters';
 const createCheckbox = (data) => {
     const checked = data.includes("[X]");
             
-    let commit = data.split("] ");
+    let commit = data.split(/\[.?\]/);
     commit = commit[commit.length - 1];
     return `
         <input type="checkbox" class="task-checkbox" value="${commit}" ${checked ? "checked" : null}>
