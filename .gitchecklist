@@ -1,6 +1,8 @@
 [X] add style checklist
 [] CSS
-    [] style file drop div
+    [] style main app title
+    [X] style file drop div
     [] style project selection
+    [] style project banner;
     [] style auto push form
     [] style checklist
