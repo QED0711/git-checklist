@@ -9,9 +9,8 @@ const createCheckbox = (data) => {
             
     let commit = data.split(/\[.?\]/);
     const indentCount = commit[0].length
-    console.log({indentCount})
     return `
-        <input type="checkbox" class="task-checkbox" value="${commit}" ${checked ? "checked" : null} style="margin-left: ${indentCount}em">
+        <input type="checkbox" class="task-checkbox" value="${commit[1]}" ${checked ? "checked" : null} style="margin-left: ${indentCount/2}em">
         <label>${commit[1]}</label>
         <br>
     `
@@ -25,7 +24,9 @@ const getChecklistData = (path) => {
     lines = lines.split("\n");
 
     for(let line of lines){
-        html += createCheckbox(line);    
+        if(line !== ""){ // stops blank lines from creating new checkboxes
+            html += createCheckbox(line);    
+        }
     }
     setChecklist(html);
     setCheckedInactive();
