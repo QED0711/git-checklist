@@ -47,6 +47,7 @@ const commitTask = async (task) => {
     const path = getCurrentProjectPath();
     console.log(path)
     await exec(`git --git-dir=${path}/.git add .`, {async: true});
+    debugger
     await exec(`git --git-dir=${path}/.git commit -m "${task}"`, {async: true});
     if(getAutoPush()){
         await exec(`git --git-dir=${path}/.git push -u origin ${getBranch()}`, {async: true});
