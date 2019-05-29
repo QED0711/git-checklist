@@ -14,3 +14,5 @@
 
 [X]  check on terminal git messages
 [X]  check auto pushing commits working
+
+[X] changed git from https to ssh

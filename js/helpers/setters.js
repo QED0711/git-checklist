@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { exec } from 'shelljs';
 
-import { getCurrentProjectPath, getAutoPush, getBranch } from "./getters";
+import { getCurrentProjectPath, getAutoPush, getBranch, getuserCredentials } from "./getters";
 
 const setChecklist = (html) => {
     document.getElementById("checklist").innerHTML = html
@@ -46,10 +46,14 @@ const updateGitChecklistFile = (value) => {
 const commitTask = async (task) => {
     const path = getCurrentProjectPath();
     console.log(path)
+
+    // const credentials = getuserCredentials();
+    // console.log(credentials)
+    // return
+
     await exec(`git --git-dir=${path}/.git add .`, {async: true});
     await exec(`git --git-dir=${path}/.git commit -m "${task}"`, {async: true});
     if(getAutoPush()){
-        debugger
         await exec(`git --git-dir=${path}/.git push -u origin ${getBranch()}`, {async: true});
     }
     

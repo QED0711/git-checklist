@@ -23,11 +23,18 @@ const hasGitChecklistFile = (path) => {
     return fs.existsSync(path + '/.gitchecklist')
 }
 
+const getuserCredentials = () => {
+    const username = document.getElementById("credentials-username").value;
+    const password = document.getElementById("credentials-password").value
+    return {username, password}
+}
+
 export {
     getCurrentProjectPath,
     getCurrentProjectName,
     getAutoPush,
     getBranch,
     hasGitChecklistFile,
+    getuserCredentials,
 }
 
