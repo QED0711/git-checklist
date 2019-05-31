@@ -20,3 +20,4 @@
 [X] changed git from https to ssh
 [X] basic checklist item adding working
 [X] basic style for new item form
+[X] extracted addNewItems to its own function
