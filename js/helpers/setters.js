@@ -55,7 +55,17 @@ const commitTask = async (task) => {
     
 }
 
+const addChecklistItem = async (newItem) => {
+    // get path to current project .gitchecklist file
+    const path = getCurrentProjectPath() + "/.gitchecklist";
+    // read contents of file
+    let items = await fs.readFileSync(path, {encoding: 'utf-8'})        
+    items += `\n[] ${newItem}`
+    fs.writeFileSync(path, items)
+}
+
 export {
     setChecklist,
     setCheckedInactive,
+    addChecklistItem,
 }
