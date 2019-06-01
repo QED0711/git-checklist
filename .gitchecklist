@@ -9,7 +9,6 @@
     [X] style auto push form
     [X] style checklist
 
-
 [X] add description and instructions
 
 [X] add reload button
@@ -22,3 +21,5 @@
 [X] basic style for new item form
 [X] extracted addNewItems to its own function
 [X] addChecklistItem to setters
+
+    [X] Added indent for adding new items

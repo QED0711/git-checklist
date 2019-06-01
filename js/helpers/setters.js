@@ -60,7 +60,7 @@ const addChecklistItem = async (newItem) => {
     const path = getCurrentProjectPath() + "/.gitchecklist";
     // read contents of file
     let items = await fs.readFileSync(path, {encoding: 'utf-8'})        
-    items += `\n[] ${newItem}`
+    items += `\n${newItem}`
     fs.writeFileSync(path, items)
 }
 

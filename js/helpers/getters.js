@@ -23,11 +23,16 @@ const hasGitChecklistFile = (path) => {
     return fs.existsSync(path + '/.gitchecklist')
 }
 
+const getNewItemIndent = () => {
+    return parseInt(document.getElementById('new-item-indent').value)
+}
+
 export {
     getCurrentProjectPath,
     getCurrentProjectName,
     getAutoPush,
     getBranch,
     hasGitChecklistFile,
+    getNewItemIndent,
 }
 
