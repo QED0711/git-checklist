@@ -67,9 +67,12 @@
         <input type='submit' value="Add new Item">
         <div>
             <label for="new-item-indent">Indent:</label>
-            <input id="new-item-indent" type="number" value="0">
+            <input id="new-item-indent" type="number" value="0" max="5" min="0">
         </div>
-        <input type="text" required>
+        <div>
+            <label for="new-item-commit">Task</label>
+            <input id="new-item-commit" type="text" required>
+        </div>
     </form>
     <div id="checklist">
         
