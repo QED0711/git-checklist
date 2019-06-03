@@ -55,7 +55,7 @@ body{
 
 #add-checklist-item{
     display: grid;
-    grid-template-columns: 15em 10em auto;   
+    grid-template-columns: 23em 10em 12em;   
 }
 
 #new-item-indent{
