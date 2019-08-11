@@ -15,8 +15,6 @@ $ cd git-checklist
 $ npm install
 $ npm start
 ```
-## Project Support & Future Plans
+## Project Support
 
 This application is meant to serve as an easy to use GUI for auto commit/push options. Feel free to clone, change, or make pull requests based on your use cases.
-
-I have an npm module version planned for use in the command line. 
