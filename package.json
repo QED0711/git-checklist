@@ -18,6 +18,6 @@
     "electron-prebuilt-compile": "^4.0.0"
   },
   "dependencies": {
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   }
 }
