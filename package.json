@@ -14,7 +14,7 @@
   "author": "Quinn Dizon",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^4.1.4",
+    "electron": "^15.5.5",
     "electron-prebuilt-compile": "^4.0.0"
   },
   "dependencies": {
